@@ -44,11 +44,13 @@
                     android:id="@+id/question_1_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="How many world series have the Yankees won?" />
+                    android:text="1) How many world series have the Yankees won?" />
 
                 <RadioGroup
+                    android:id="@+id/radioGroup1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/questionOneIncorrect"
@@ -65,13 +67,35 @@
                         android:onClick="question1RadioButton"/>
                 </RadioGroup>
 
+                <!-- Question 2 -->
+                <TextView
+                    android:id="@+id/question_2_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2) How many world series have the Yankees won?" />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/questionTwoIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12"
+                        android:onClick="question2RadioButton"/>
+
+                    <RadioButton
+                        android:id="@+id/questionTwoCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="27"
+                        android:onClick="question2RadioButton"/>
+                </RadioGroup>
+
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/question_2_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Question 2" />
 
             <TextView
                 android:id="@+id/question_3_text_view"
@@ -125,7 +149,8 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/submit_answers_button"
@@ -133,6 +158,13 @@
                 android:layout_height="wrap_content"
                 android:onClick="submitAnswers"
                 android:text="Submit" />
+
+            <Button
+                android:id="@+id/reset_scores_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetScores"
+                android:text="Reset"/>
 
         </LinearLayout>
     </LinearLayout>

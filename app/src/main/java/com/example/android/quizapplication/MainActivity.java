@@ -8,8 +8,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int percentCorrect = 0;
-    int totalQuestions = 1;
+    int totalQuestions = 2;
     int correctAnswers = 0;
 
     @Override
@@ -21,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     // called from the onClick for the submit_answers_button in activity_main.xml
     public void submitAnswers(View view) {
         // Calls the display method
-        displayMessage(percentCorrect);
+        displayMessage();
     }
 
     public void question1RadioButton(View view) {
@@ -42,20 +41,48 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public int calculateFinalScore(int correctAnswers, int totalQuestions) {
-        double finalScore = (double) correctAnswers / (double) totalQuestions;
-        int percentCorrect = (int) finalScore * 100;
+    public void question2RadioButton(View view) {
+        // Import radio buttons for question 1
+        RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
+        RadioButton questionTwoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
+
+        // Check which radio button was clicked
+        switch (view.getId()) {
+            case R.id.questionTwoCorrect:
+                if (questionTwoCorrectRB.isChecked())
+                    correctAnswers += 1;
+                break;
+            case R.id.questionTwoIncorrect:
+                if (questionTwoIncorrectRB.isChecked()) {
+                    break;
+                }
+        }
+    }
+
+    public int calculateFinalScore(int answersCorrect, int questionTotal) {
+        int percentCorrect = (int) (((double) answersCorrect / (double) questionTotal) * 100);
         return percentCorrect;
     }
 
-    public void displayMessage(int finalPercentage) {
+    public void displayMessage() {
         Toast.makeText(this, "Your final score is " + calculateFinalScore(correctAnswers, totalQuestions) + "%", Toast.LENGTH_SHORT).show();
-        resetScores();
     }
 
-    public void resetScores() {
-        percentCorrect = 0;
-        totalQuestions = 1;
+    public void resetScores(View view) {
         correctAnswers = 0;
+
+        radioGroup1Clear();
+
+        RadioButton questionOneIncorrectRB = findViewById(R.id.questionOneIncorrect);
+        RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
+        RadioButton questionTwoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
+        questionOneIncorrectRB.setChecked(false);
+        questionTwoCorrectRB.setChecked(false);
+        questionTwoIncorrectRB.setChecked(false);
+    }
+
+    public void radioGroup1Clear(View view){
+        RadioButton radioGroupOneClear = findViewById(R.id.radioGroup1);
+        radioGroupOneClear.clearCheck();
     }
 }
