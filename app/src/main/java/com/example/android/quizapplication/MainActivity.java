@@ -17,12 +17,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    // called from the onClick for the submit_answers_button in activity_main.xml
+    /**
+     * Called from the onClick for the submit_answers_button in activity_main.xml
+     *
+     * calls the displayMessage method to display the Toast message
+     */
     public void submitAnswers(View view) {
         // Calls the display method
         displayMessage();
     }
 
+    // Checks the radioButton answers for question 1
     public void question1RadioButton(View view) {
         // Import radio buttons for question 1
         RadioButton questionOneCorrectRB = findViewById(R.id.questionOneCorrect);
@@ -41,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // Checks the radioButton answers for question 2
     public void question2RadioButton(View view) {
-        // Import radio buttons for question 1
+        // Import radio buttons for question 2
         RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
         RadioButton questionTwoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
 
@@ -59,30 +65,40 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Calculates the final percentage of correct answers
+     *
+     * The percentCorrect is converted to an integer to cut off any decimals
+     *
+     * @param answersCorrect passes in the answers correct and converts it to a double as there will be decimals in the final calculation
+     * @param questionTotal passes in the total questions and converts it to a double as there will be decimals in the final calculation
+     * @return returns the percentage of correct answers
+     */
     public int calculateFinalScore(int answersCorrect, int questionTotal) {
         int percentCorrect = (int) (((double) answersCorrect / (double) questionTotal) * 100);
         return percentCorrect;
     }
 
+    // method to display the Toast of the final score percentage
     public void displayMessage() {
         Toast.makeText(this, "Your final score is " + calculateFinalScore(correctAnswers, totalQuestions) + "%", Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Called from the onClick for the submit_answers_button in activity_main.xml
+     * Clears the radioButtons and resets the correctAnswers variable to 0 when the Reset button is pressed
+     */
     public void resetScores(View view) {
-        correctAnswers = 0;
-
-        radioGroup1Clear();
-
+        RadioButton questionOneCorrectRB = findViewById(R.id.questionOneCorrect);
         RadioButton questionOneIncorrectRB = findViewById(R.id.questionOneIncorrect);
         RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
         RadioButton questionTwoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
+        questionOneCorrectRB.setChecked(false);
         questionOneIncorrectRB.setChecked(false);
         questionTwoCorrectRB.setChecked(false);
         questionTwoIncorrectRB.setChecked(false);
+
+        correctAnswers = 0;
     }
 
-    public void radioGroup1Clear(View view){
-        RadioButton radioGroupOneClear = findViewById(R.id.radioGroup1);
-        radioGroupOneClear.clearCheck();
-    }
 }
