@@ -38,7 +38,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:focusableInTouchMode="true"
+                android:focusable="true">
 
                 <TextView
                     android:id="@+id/question_1_text_view"
@@ -74,266 +76,260 @@
                     android:layout_height="wrap_content"
                     android:text="2) The Oldest baseball stadium still in use is?" />
 
-                <CheckBox
-                    android:id="@+id/questionTwoCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question2CheckBox"
-                    android:text="Fenway Park" />
+                    android:orientation="horizontal">
 
-                <CheckBox
-                    android:id="@+id/questionTwoIncorrect"
+                    <RadioButton
+                        android:id="@+id/questionTwoCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question2RadioButton"
+                        android:text="Fenway Park" />
+
+                    <RadioButton
+                        android:id="@+id/questionTwoIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question2RadioButton"
+                        android:text="Yankee Stadium" />
+                </RadioGroup>
+
+                <!-- Question 3 -->
+                <TextView
+                    android:id="@+id/question_3_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question2CheckBox"
-                    android:text="Yankee Stadium" />
+                    android:text="3) How many world series have the Yankees won?" />
 
-            <!-- Question 3 -->
-            <TextView
-                android:id="@+id/question_3_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3) How many world series have the Yankees won?" />
+                <EditText
+                    android:id="@+id/question3EditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Answer"
+                    android:focusedByDefault="false" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/questionThreeIncorrect"
+                <!-- Question 4 -->
+                <TextView
+                    android:id="@+id/question_4_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question3RadioButton"
-                    android:text="12" />
+                    android:text="4) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionThreeCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question3RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 4 -->
-            <TextView
-                android:id="@+id/question_4_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionFourIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question4RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionFourCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question4RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionFourIncorrect"
+                <!-- Question 5 -->
+                <TextView
+                    android:id="@+id/question_5_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question4RadioButton"
-                    android:text="12" />
+                    android:text="5) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionFourCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question4RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 5 -->
-            <TextView
-                android:id="@+id/question_5_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionFiveIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question5RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionFiveCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question5RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionFiveIncorrect"
+                <!-- Question 6 -->
+                <TextView
+                    android:id="@+id/question_6_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question5RadioButton"
-                    android:text="12" />
+                    android:text="6) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionFiveCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question5RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 6 -->
-            <TextView
-                android:id="@+id/question_6_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionSixIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question6RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionSixCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question6RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionSixIncorrect"
+                <!-- Question 7 -->
+                <TextView
+                    android:id="@+id/question_7_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question6RadioButton"
-                    android:text="12" />
+                    android:text="7) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionSixCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question6RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 7 -->
-            <TextView
-                android:id="@+id/question_7_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionSevenIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question7RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionSevenCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question7RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionSevenIncorrect"
+                <!-- Question 8 -->
+                <TextView
+                    android:id="@+id/question_8_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question7RadioButton"
-                    android:text="12" />
+                    android:text="8) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionSevenCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question7RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 8 -->
-            <TextView
-                android:id="@+id/question_8_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionEightIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question8RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionEightCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question8RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionEightIncorrect"
+                <!-- Question 9 -->
+                <TextView
+                    android:id="@+id/question_9_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question8RadioButton"
-                    android:text="12" />
+                    android:text="9) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionEightCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question8RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 9 -->
-            <TextView
-                android:id="@+id/question_9_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionNineIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question9RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionNineCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question9RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionNineIncorrect"
+                <!-- Question 10 -->
+                <TextView
+                    android:id="@+id/question_10_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question9RadioButton"
-                    android:text="12" />
+                    android:text="10) How many world series have the Yankees won?" />
 
-                <RadioButton
-                    android:id="@+id/questionNineCorrect"
+                <RadioGroup
+                    android:id="@+id/radioGroup10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="question9RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+                    android:orientation="horizontal">
 
-            <!-- Question 10 -->
-            <TextView
-                android:id="@+id/question_10_text_view"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="10) How many world series have the Yankees won?" />
+                    <RadioButton
+                        android:id="@+id/questionTenIncorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question10RadioButton"
+                        android:text="12" />
 
-            <RadioGroup
-                android:id="@+id/radioGroup10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/questionTenCorrect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question10RadioButton"
+                        android:text="27" />
+                </RadioGroup>
 
-                <RadioButton
-                    android:id="@+id/questionTenIncorrect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="question10RadioButton"
-                    android:text="12" />
-
-                <RadioButton
-                    android:id="@+id/questionTenCorrect"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:onClick="question10RadioButton"
-                    android:text="27" />
-            </RadioGroup>
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/submit_answers_button"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="submitAnswers"
-            android:text="Submit" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/reset_scores_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="resetScores"
-            android:text="Reset" />
+            <Button
+                android:id="@+id/submit_answers_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="submitAnswers"
+                android:text="Submit" />
 
+            <Button
+                android:id="@+id/reset_scores_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="resetScores"
+                android:text="Reset" />
+
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout></ScrollView>
+</ScrollView>

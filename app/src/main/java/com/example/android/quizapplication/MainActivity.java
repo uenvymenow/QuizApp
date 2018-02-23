@@ -1,27 +1,28 @@
 package com.example.android.quizapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     int totalQuestions = 10;
     int correctAnswers = 0;
-    int radioButton1Score = 0;
-    int checkBox2Score = 0;
-    int radioButton3Score = 0;
-    int radioButton4Score = 0;
-    int radioButton5Score = 0;
-    int radioButton6Score = 0;
-    int radioButton7Score = 0;
-    int radioButton8Score = 0;
-    int radioButton9Score = 0;
-    int radioButton10Score = 0;
+    int question1Score = 0;
+    int question2Score = 0;
+    int question3Score = 0;
+    int question4Score = 0;
+    int question5Score = 0;
+    int question6Score = 0;
+    int question7Score = 0;
+    int question8Score = 0;
+    int question9Score = 0;
+    int question10Score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,47 +50,54 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionOneCorrect:
                 if (questionOneCorrectRB.isChecked())
-                    radioButton1Score = 1;
+                    question1Score = 1;
                 break;
             case R.id.questionOneIncorrect:
                 if (questionOneIncorrectRB.isChecked()) {
-                    radioButton1Score = 0;
+                    question1Score = 0;
                     break;
                 }
         }
     }
 
     // Checks the radioButton answers for question 2
-    public void question2CheckBox(View view) {
+    public void question2RadioButton(View view) {
         // Import radio buttons for question 2
-        CheckBox questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
+        RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
+        RadioButton questionTWoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
 
-        // Check which Checkbox button was clicked
-                if (questionTwoCorrectRB.isChecked()){
-                    checkBox2Score = 1;
-                } else {
-                    checkBox2Score = 0;
+        // Check which RadioButton was clicked
+        switch (view.getId()){
+            case R.id.questionTwoCorrect:
+                if (questionTwoCorrectRB.isChecked())
+                    question2Score = 1;
+                break;
+            case R.id.questionTwoIncorrect:
+                if (questionTWoIncorrectRB.isChecked()){
+                    question2Score = 0;
                 }
+
+        }
     }
 
-    // Checks the radioButton answers for question 3
-    public void question3RadioButton(View view) {
+    // Checks the EditText answers for question 3
+    public int question3EditTextView() {
         // Import radio buttons for question 3
-        RadioButton questionThreeCorrectRB = findViewById(R.id.questionThreeCorrect);
-        RadioButton questionThreeIncorrectRB = findViewById(R.id.questionThreeIncorrect);
+        EditText questionThreeEditText = findViewById(R.id.question3EditText);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionThreeCorrect:
-                if (questionThreeCorrectRB.isChecked())
-                    radioButton3Score = 1;
-                break;
-            case R.id.questionThreeIncorrect:
-                if (questionThreeIncorrectRB.isChecked()) {
-                    radioButton3Score = 0;
-                    break;
-                }
+        // Creates a string variable to hold the text entered into
+        String questionThreeAnswer = questionThreeEditText.getText().toString();
+        questionThreeAnswer = questionThreeAnswer.toLowerCase();
+
+
+        // Checks if answer is correct and if so, adds 1 to correct answer, otherwise it stays as 0 for correct answer
+        if ((questionThreeAnswer.equals("second base")) || (questionThreeAnswer.equals("second"))) {
+            question3Score = 1;
+        } else {
+            question3Score = 0;
         }
+
+        return question3Score;
     }
 
     // Checks the radioButton answers for question 4
@@ -102,11 +110,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionFourCorrect:
                 if (questionFourCorrectRB.isChecked())
-                    radioButton4Score = 1;
+                    question4Score = 1;
                 break;
             case R.id.questionFourIncorrect:
                 if (questionFourIncorrectRB.isChecked()) {
-                    radioButton4Score = 0;
+                    question4Score = 0;
                     break;
                 }
         }
@@ -122,11 +130,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionFiveCorrect:
                 if (questionFiveCorrectRB.isChecked())
-                    radioButton5Score = 1;
+                    question5Score = 1;
                 break;
             case R.id.questionFiveIncorrect:
                 if (questionFiveIncorrectRB.isChecked()) {
-                    radioButton5Score = 0;
+                    question5Score = 0;
                     break;
                 }
         }
@@ -142,11 +150,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionSixCorrect:
                 if (questionSixCorrectRB.isChecked())
-                    radioButton6Score = 1;
+                    question6Score = 1;
                 break;
             case R.id.questionSixIncorrect:
                 if (questionSixIncorrectRB.isChecked()) {
-                    radioButton6Score = 0;
+                    question6Score = 0;
                     break;
                 }
         }
@@ -162,11 +170,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionSevenCorrect:
                 if (questionSevenCorrectRB.isChecked())
-                    radioButton7Score = 1;
+                    question7Score = 1;
                 break;
             case R.id.questionSevenIncorrect:
                 if (questionSevenIncorrectRB.isChecked()) {
-                    radioButton7Score = 0;
+                    question7Score = 0;
                     break;
                 }
         }
@@ -182,11 +190,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionEightCorrect:
                 if (questionEightCorrectRB.isChecked())
-                    radioButton8Score = 1;
+                    question8Score = 1;
                 break;
             case R.id.questionEightIncorrect:
                 if (questionEightIncorrectRB.isChecked()) {
-                    radioButton8Score = 0;
+                    question8Score = 0;
                     break;
                 }
         }
@@ -202,11 +210,11 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionNineCorrect:
                 if (questionNineCorrectRB.isChecked())
-                    radioButton9Score = 1;
+                    question9Score = 1;
                 break;
             case R.id.questionNineIncorrect:
                 if (questionNineIncorrectRB.isChecked()) {
-                    radioButton9Score = 0;
+                    question9Score = 0;
                     break;
                 }
         }
@@ -222,19 +230,23 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()) {
             case R.id.questionTenCorrect:
                 if (questionTenCorrectRB.isChecked())
-                    radioButton10Score = 1;
+                    question10Score = 1;
                 break;
             case R.id.questionTenIncorrect:
                 if (questionTenIncorrectRB.isChecked()) {
-                    radioButton10Score = 0;
+                    question10Score = 0;
                     break;
                 }
         }
     }
 
     public int calculateCorrectAnswers(){
-        correctAnswers = (radioButton1Score + checkBox2Score + radioButton3Score + radioButton4Score + radioButton5Score + radioButton6Score + radioButton7Score +
-                            radioButton8Score + radioButton9Score + radioButton10Score);
+        // calls the questionThreeEditTextView method to retrieve the score for question 3
+        question3Score = question3EditTextView();
+
+        // Adds all of the correct answers
+        correctAnswers = (question1Score + question2Score + question3Score + question4Score + question5Score + question6Score + question7Score +
+                            question8Score + question9Score + question10Score);
         return correctAnswers;
     }
 
@@ -262,49 +274,9 @@ public class MainActivity extends AppCompatActivity {
      * Clears the radioButtons and resets the correctAnswers variable to 0 when the Reset button is pressed
      */
     public void resetScores(View view) {
-        // Clears Question 1 radioButtons
-        RadioGroup questionOneRG = findViewById(R.id.radioGroup1);
-        questionOneRG.clearCheck();
-
-        // Clears question 2 checkBoxes
-        CheckBox questionTwoCorrectCheckBox = findViewById(R.id.questionTwoCorrect);
-        CheckBox questionTwoIncorrectCheckBox = findViewById(R.id.questionTwoIncorrect);
-        questionTwoCorrectCheckBox.setChecked(false);
-        questionTwoIncorrectCheckBox.setChecked(false);
-
-        // Clears question 3 radioButtons
-        RadioGroup questionThreeRG = findViewById(R.id.radioGroup3);
-        questionThreeRG.clearCheck();
-
-        // Clears question 4 radioButtons
-        RadioGroup questionFourRG = findViewById(R.id.radioGroup4);
-        questionFourRG.clearCheck();
-
-        // Clears question 5 radioButtons
-        RadioGroup questionFiveRG = findViewById(R.id.radioGroup5);
-        questionFiveRG.clearCheck();
-
-        // Clears question 6 radioButtons
-        RadioGroup questionSixRG = findViewById(R.id.radioGroup6);
-        questionSixRG.clearCheck();
-
-        // Clears question 7 radioButtons
-        RadioGroup questionSevenRG = findViewById(R.id.radioGroup7);
-        questionSevenRG.clearCheck();
-
-        // Clears question 8 radioButtons
-        RadioGroup questionEightRG = findViewById(R.id.radioGroup8);
-        questionEightRG.clearCheck();
-
-        // Clears question 9 radioButtons
-        RadioGroup questionNineRG = findViewById(R.id.radioGroup9);
-        questionNineRG.clearCheck();
-
-        // Clears question 10 radioButtons
-        RadioGroup questionTenRG = findViewById(R.id.radioGroup10);
-        questionTenRG.clearCheck();
-
-        correctAnswers = 0;
+        Intent resetApp = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+        resetApp.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(resetApp);
     }
 
 }
