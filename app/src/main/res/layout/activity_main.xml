@@ -38,9 +38,9 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
+                android:focusable="true"
                 android:focusableInTouchMode="true"
-                android:focusable="true">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/question_1_text_view"
@@ -102,42 +102,49 @@
                     android:id="@+id/question_3_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="3) How many world series have the Yankees won?" />
+                    android:text="3) What is the most frequently stolen base?" />
 
                 <EditText
                     android:id="@+id/question3EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Answer"
-                    android:focusedByDefault="false" />
+                    android:focusedByDefault="false"
+                    android:hint="Answer" />
 
                 <!-- Question 4 -->
                 <TextView
                     android:id="@+id/question_4_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4) How many world series have the Yankees won?" />
+                    android:text="4) Which of the aspects of scorekeeping are displayed on a standard scoreboard?" />
 
-                <RadioGroup
-                    android:id="@+id/radioGroup4"
+                <CheckBox
+                    android:id="@+id/questionFourIncorrect1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:onClick="question4CheckBox"
+                    android:text="Field Goals" />
 
-                    <RadioButton
-                        android:id="@+id/questionFourIncorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question4RadioButton"
-                        android:text="12" />
+                <CheckBox
+                    android:id="@+id/questionFourIncorrect2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4CheckBox"
+                    android:text="Goals" />
 
-                    <RadioButton
-                        android:id="@+id/questionFourCorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question4RadioButton"
-                        android:text="27" />
-                </RadioGroup>
+                <CheckBox
+                    android:id="@+id/questionFourCorrect1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4CheckBox"
+                    android:text="Hits" />
+
+                <CheckBox
+                    android:id="@+id/questionFourCcorrect2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="question4CheckBox"
+                    android:text="Runs" />
 
                 <!-- Question 5 -->
                 <TextView
