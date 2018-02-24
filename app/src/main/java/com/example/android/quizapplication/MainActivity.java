@@ -1,6 +1,7 @@
 package com.example.android.quizapplication;
 
 import android.content.Intent;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -44,39 +45,25 @@ public class MainActivity extends AppCompatActivity {
     public void question1RadioButton(View view) {
         // Import radio buttons for question 1
         RadioButton questionOneCorrectRB = findViewById(R.id.questionOneCorrect);
-        RadioButton questionOneIncorrectRB = findViewById(R.id.questionOneIncorrect);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionOneCorrect:
-                if (questionOneCorrectRB.isChecked())
-                    question1Score = 1;
-                break;
-            case R.id.questionOneIncorrect:
-                if (questionOneIncorrectRB.isChecked()) {
-                    question1Score = 0;
-                    break;
-                }
+        // Check which RadioButton is clicked
+        if (questionOneCorrectRB.isChecked()) {
+            question1Score = 1;
+        } else {
+            question1Score = 0;
         }
     }
 
     // Checks the radioButton answers for question 2
     public void question2RadioButton(View view) {
-        // Import radio buttons for question 2
+        // Import correct radio button for question 2
         RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
-        RadioButton questionTWoIncorrectRB = findViewById(R.id.questionTwoIncorrect);
 
         // Check which RadioButton was clicked
-        switch (view.getId()){
-            case R.id.questionTwoCorrect:
-                if (questionTwoCorrectRB.isChecked())
-                    question2Score = 1;
-                break;
-            case R.id.questionTwoIncorrect:
-                if (questionTWoIncorrectRB.isChecked()){
-                    question2Score = 0;
-                }
-
+        if (questionTwoCorrectRB.isChecked()) {
+            question2Score = 1;
+        } else {
+            question2Score = 0;
         }
     }
 
@@ -116,21 +103,14 @@ public class MainActivity extends AppCompatActivity {
 
     // Checks the radioButton answers for question 5
     public void question5RadioButton(View view) {
-        // Import radio buttons for question 5
+        // Import correct radio buttons for question 5
         RadioButton questionFiveCorrectRB = findViewById(R.id.questionFiveCorrect);
-        RadioButton questionFiveIncorrectRB = findViewById(R.id.questionFiveIncorrect);
 
         // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionFiveCorrect:
-                if (questionFiveCorrectRB.isChecked())
-                    question5Score = 1;
-                break;
-            case R.id.questionFiveIncorrect:
-                if (questionFiveIncorrectRB.isChecked()) {
-                    question5Score = 0;
-                    break;
-                }
+        if (questionFiveCorrectRB.isChecked()){
+            question5Score = 1;
+        } else {
+            question5Score = 0;
         }
     }
 

@@ -151,7 +151,7 @@
                     android:id="@+id/question_5_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5) How many world series have the Yankees won?" />
+                    android:text="5) How many innings are in a game?" />
 
                 <RadioGroup
                     android:id="@+id/radioGroup5"
@@ -160,18 +160,32 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:id="@+id/questionFiveIncorrect"
+                        android:id="@+id/questionFiveIncorrect1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question5RadioButton"
-                        android:text="12" />
+                        android:text="6" />
 
                     <RadioButton
                         android:id="@+id/questionFiveCorrect"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question5RadioButton"
-                        android:text="27" />
+                        android:text="9" />
+
+                    <RadioButton
+                        android:id="@+id/questionFiveIncorrect2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question5RadioButton"
+                        android:text="7" />
+
+                    <RadioButton
+                        android:id="@+id/questionFiveIncorrect3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="question5RadioButton"
+                        android:text="8" />
                 </RadioGroup>
 
                 <!-- Question 6 -->
