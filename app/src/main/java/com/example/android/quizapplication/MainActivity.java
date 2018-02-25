@@ -118,19 +118,12 @@ public class MainActivity extends AppCompatActivity {
     public void question6RadioButton(View view) {
         // Import radio buttons for question 6
         RadioButton questionSixCorrectRB = findViewById(R.id.questionSixCorrect);
-        RadioButton questionSixIncorrectRB = findViewById(R.id.questionSixIncorrect);
 
         // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionSixCorrect:
-                if (questionSixCorrectRB.isChecked())
-                    question6Score = 1;
-                break;
-            case R.id.questionSixIncorrect:
-                if (questionSixIncorrectRB.isChecked()) {
-                    question6Score = 0;
-                    break;
-                }
+        if (questionSixCorrectRB.isChecked()){
+            question6Score = 1;
+        } else {
+            question6Score = 0;
         }
     }
 
