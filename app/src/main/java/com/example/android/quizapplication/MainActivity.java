@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         // Import radio buttons for question 1
         RadioButton questionOneCorrectRB = findViewById(R.id.questionOneCorrect);
 
-        // Check which RadioButton is clicked
+        // Check if correct RadioButton is clicked
         if (questionOneCorrectRB.isChecked()) {
             question1Score = 1;
         } else {
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         // Import correct radio button for question 2
         RadioButton questionTwoCorrectRB = findViewById(R.id.questionTwoCorrect);
 
-        // Check which RadioButton was clicked
+        // Check if correct RadioButton was clicked
         if (questionTwoCorrectRB.isChecked()) {
             question2Score = 1;
         } else {
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox questionFourCorrectCB1 = findViewById(R.id.questionFourCorrect1);
         CheckBox questionFourCorrectCB2 = findViewById(R.id.questionFourCcorrect2);
 
-        // Check which checkbox was clicked
+        // Check if correct checkbox was clicked
         if ((questionFourCorrectCB1.isChecked()) && (questionFourCorrectCB2.isChecked())){
             question4Score = 1;
         } else {
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
         // Import correct radio buttons for question 5
         RadioButton questionFiveCorrectRB = findViewById(R.id.questionFiveCorrect);
 
-        // Check which radio button was clicked
+        // Check if correct radio button was clicked
         if (questionFiveCorrectRB.isChecked()){
             question5Score = 1;
         } else {
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
         // Import radio buttons for question 6
         RadioButton questionSixCorrectRB = findViewById(R.id.questionSixCorrect);
 
-        // Check which radio button was clicked
+        // Check if correct radio button was clicked
         if (questionSixCorrectRB.isChecked()){
             question6Score = 1;
         } else {
@@ -128,43 +128,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Checks the radioButton answers for question 7
-    public void question7RadioButton(View view) {
+    public void question7CheckBox(View view) {
         // Import radio buttons for question 7
-        RadioButton questionSevenCorrectRB = findViewById(R.id.questionSevenCorrect);
-        RadioButton questionSevenIncorrectRB = findViewById(R.id.questionSevenIncorrect);
+        CheckBox questionSevenCorrectCB1 = findViewById(R.id.question7Correct1);
+        CheckBox questionSevenCorrectCB2 = findViewById(R.id.question7Correct2);
+        CheckBox questionSevenCorrectCB3 = findViewById(R.id.question7Correct3);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionSevenCorrect:
-                if (questionSevenCorrectRB.isChecked())
-                    question7Score = 1;
-                break;
-            case R.id.questionSevenIncorrect:
-                if (questionSevenIncorrectRB.isChecked()) {
-                    question7Score = 0;
-                    break;
-                }
+        // Check if correct checkbox was clicked button was clicked
+        if ((questionSevenCorrectCB1.isChecked()) && (questionSevenCorrectCB2.isChecked()) && (questionSevenCorrectCB3.isChecked())){
+            question6Score = 1;
+        } else {
+            question6Score = 0;
         }
     }
 
     // Checks the radioButton answers for question 8
-    public void question8RadioButton(View view) {
+    public int question8EditText() {
         // Import radio buttons for question 8
-        RadioButton questionEightCorrectRB = findViewById(R.id.questionEightCorrect);
-        RadioButton questionEightIncorrectRB = findViewById(R.id.questionEightIncorrect);
+        EditText questionEightCorrect = findViewById(R.id.question8Answer);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionEightCorrect:
-                if (questionEightCorrectRB.isChecked())
-                    question8Score = 1;
-                break;
-            case R.id.questionEightIncorrect:
-                if (questionEightIncorrectRB.isChecked()) {
-                    question8Score = 0;
-                    break;
-                }
+        String question8AnswerString = questionEightCorrect.getText().toString();
+
+        // Check if input is 30
+        if (question8AnswerString.equals("30")){
+            question8Score = 1;
+        } else {
+            question8Score = 0;
         }
+
+        return question8Score;
     }
 
     // Checks the radioButton answers for question 9
@@ -210,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
     public int calculateCorrectAnswers(){
         // calls the questionThreeEditTextView method to retrieve the score for question 3
         question3Score = question3EditTextView();
+        question8Score = question8EditText();
 
         // Adds all of the correct answers
         correctAnswers = (question1Score + question2Score + question3Score + question4Score + question5Score + question6Score + question7Score +

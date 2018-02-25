@@ -109,7 +109,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusedByDefault="false"
-                    android:hint="Answer" />
+                    android:hint="First Base, Second Base, Third Base, or Home"/>
 
                 <!-- Question 4 -->
                 <TextView
@@ -206,7 +206,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="7" />
+                        android:text="6" />
 
                     <RadioButton
                         android:id="@+id/questionSixIncorrect2"
@@ -220,7 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="9" />
+                        android:text="8" />
 
                     <RadioButton
                         android:id="@+id/questionSixIncorrect3"
@@ -235,28 +235,40 @@
                     android:id="@+id/question_7_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7) How many world series have the Yankees won?" />
+                    android:text="7) Which of the following are positions in baseball?" />
 
-                <RadioGroup
-                    android:id="@+id/radioGroup7"
+                <CheckBox
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Quarterback"
+                    android:onClick="question7CheckBox"/>
+
+                <CheckBox
+                    android:id="@+id/question7Correct1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="Left Fielder"
+                    android:onClick="question7CheckBox"/>
 
-                    <RadioButton
-                        android:id="@+id/questionSevenIncorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question7RadioButton"
-                        android:text="12" />
+                <CheckBox
+                    android:id="@+id/question7Correct2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catcher"
+                    android:onClick="question7CheckBox"/>
 
-                    <RadioButton
-                        android:id="@+id/questionSevenCorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question7RadioButton"
-                        android:text="27" />
-                </RadioGroup>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wide Receiver"
+                    android:onClick="question7CheckBox"/>
+
+                <CheckBox
+                    android:id="@+id/question7Correct3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shortstop"
+                    android:onClick="question7CheckBox"/>
 
                 <!-- Question 8 -->
                 <TextView
@@ -265,26 +277,12 @@
                     android:layout_height="wrap_content"
                     android:text="8) How many world series have the Yankees won?" />
 
-                <RadioGroup
-                    android:id="@+id/radioGroup8"
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:id="@+id/question8Answer"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <RadioButton
-                        android:id="@+id/questionEightIncorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question8RadioButton"
-                        android:text="12" />
-
-                    <RadioButton
-                        android:id="@+id/questionEightCorrect"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:onClick="question8RadioButton"
-                        android:text="27" />
-                </RadioGroup>
+                    android:hint="Numeric Value"
+                    android:inputType="number"/>
 
                 <!-- Question 9 -->
                 <TextView
