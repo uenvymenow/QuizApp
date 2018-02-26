@@ -43,4 +43,43 @@
     <string name="Question5Answer3">7</string>
     <string name="Question5Answer4">8</string>
 
+    <!-- Question 6 -->
+    <string name="Question6">6) How many position players are there in baseball?</string>
+    <string name="Question6Answer1">6</string>
+    <string name="Question6Answer2">11</string>
+    <string name="Question6Answer3">8</string>
+    <string name="Question6Answer4">5</string>
+
+    <!-- Question 7 -->
+    <string name="Question7">7) Which of the following are positions in baseball?</string>
+    <string name="Question7Answer1">Quarterback</string>
+    <string name="Question7Answer2">Left Fielder</string>
+    <string name="Question7Answer3">Catcher</string>
+    <string name="Question7Answer4">Wide Receiver</string>
+    <string name="Question7Answer5">Shortstop</string>
+
+    <!-- Question 8 -->
+    <string name="Question8">8) How many major league teams are there in baseball?</string>
+    <string name="Question8Hint">Numeric Value</string>
+
+    <!-- Question 9 -->
+    <string name="Question9">9) How many pitchers have thrown no-hitters since 1876?</string>
+    <string name="Question9Answer1">107</string>
+    <string name="Question9Answer2">312</string>
+    <string name="Question9Answer3">230</string>
+    <string name="Question9Answer4">296</string>
+
+    <!-- Question 10 -->
+    <string name="Question10">10) What stadium do the Minnesota Twins play in?</string>
+    <string name="Question10Answer1">SunTrust Park</string>
+    <string name="Question10Answer2">Tropicana Field</string>
+    <string name="Question10Answer3">Target Field</string>
+    <string name="Question10Answer4">Comerica Park</string>
+
+    <!-- Submit Button -->
+    <string name="SubmitButton">Submit</string>
+
+    <! -- Reset Button -->
+    <string name="ResetButton">Reset</string>
+
 </resources>

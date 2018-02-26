@@ -236,7 +236,7 @@
                     android:id="@+id/question_6_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6) How many position players are there in baseball?"
+                    android:text="@string/Question6"
                     android:textSize="14sp" />
 
                 <RadioGroup
@@ -250,7 +250,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="6"
+                        android:text="@string/Question6Answer1"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -258,7 +258,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="11"
+                        android:text="@string/Question6Answer2"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -266,7 +266,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="8"
+                        android:text="@string/Question6Answer3"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -274,7 +274,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question6RadioButton"
-                        android:text="5"
+                        android:text="@string/Question6Answer4"
                         android:textSize="14sp" />
                 </RadioGroup>
 
@@ -283,14 +283,14 @@
                     android:id="@+id/question_7_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="7) Which of the following are positions in baseball?"
+                    android:text="@string/Question7"
                     android:textSize="14sp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="question7CheckBox"
-                    android:text="Quarterback"
+                    android:text="@string/Question7Answer1"
                     android:textSize="14sp" />
 
                 <CheckBox
@@ -298,7 +298,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="question7CheckBox"
-                    android:text="Left Fielder"
+                    android:text="@string/Question7Answer2"
                     android:textSize="14sp" />
 
                 <CheckBox
@@ -306,14 +306,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="question7CheckBox"
-                    android:text="Catcher"
+                    android:text="@string/Question7Answer3"
                     android:textSize="14sp" />
 
                 <CheckBox
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="question7CheckBox"
-                    android:text="Wide Receiver"
+                    android:text="@string/Question7Answer4"
                     android:textSize="14sp" />
 
                 <CheckBox
@@ -321,7 +321,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="question7CheckBox"
-                    android:text="Shortstop"
+                    android:text="@string/Question7Answer5"
                     android:textSize="14sp" />
 
                 <!-- Question 8 -->
@@ -329,14 +329,14 @@
                     android:id="@+id/question_8_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="8) How many major league teams are there in baseball?"
+                    android:text="@string/Question8"
                     android:textSize="14sp" />
 
                 <EditText
                     android:id="@+id/question8Answer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Numeric Value"
+                    android:hint="@string/Question8Hint"
                     android:inputType="number"
                     android:textSize="14sp" />
 
@@ -345,7 +345,7 @@
                     android:id="@+id/question_9_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="9) How many pitchers have thrown no-hitters since 1876?"
+                    android:text="@string/Question9"
                     android:textSize="14sp" />
 
                 <RadioGroup
@@ -359,7 +359,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question9RadioButton"
-                        android:text="107"
+                        android:text="@string/Question9Answer1"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -367,7 +367,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question9RadioButton"
-                        android:text="312"
+                        android:text="@string/Question9Answer2"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -375,7 +375,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question9RadioButton"
-                        android:text="230"
+                        android:text="@string/Question9Answer3"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -383,7 +383,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question9RadioButton"
-                        android:text="296"
+                        android:text="@string/Question9Answer4"
                         android:textSize="14sp" />
                 </RadioGroup>
 
@@ -392,7 +392,7 @@
                     android:id="@+id/question_10_text_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="10) What stadium do the Minnesota Twins play in?"
+                    android:text="@string/Question10"
                     android:textSize="14sp" />
 
                 <RadioGroup
@@ -406,7 +406,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question10RadioButton"
-                        android:text="SunTrust Park"
+                        android:text="@string/Question10Answer1"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -414,7 +414,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question10RadioButton"
-                        android:text="Tropicana Field"
+                        android:text="@string/Question10Answer2"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -422,7 +422,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question10RadioButton"
-                        android:text="Target Field"
+                        android:text="@string/Question10Answer3"
                         android:textSize="14sp" />
 
                     <RadioButton
@@ -430,7 +430,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:onClick="question10RadioButton"
-                        android:text="Comerica Park"
+                        android:text="@string/Question10Answer4"
                         android:textSize="14sp" />
                 </RadioGroup>
 
@@ -446,14 +446,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="submitAnswers"
-                    android:text="Submit" />
+                    android:text="@string/SubmitButton" />
 
                 <Button
                     android:id="@+id/reset_scores_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:onClick="resetScores"
-                    android:text="Reset" />
+                    android:text="@string/ResetButton" />
 
             </LinearLayout>
         </LinearLayout>
