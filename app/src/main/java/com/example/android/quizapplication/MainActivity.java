@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
      * Called from the onClick for the submit_answers_button in activity_main.xml
-     *
+     * <p>
      * calls the displayMessage method to display the Toast message
      */
     public void submitAnswers(View view) {
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox questionFourCorrectCB2 = findViewById(R.id.questionFourCorrect2);
 
         // Check if correct checkbox was clicked
-        if ((questionFourCorrectCB1.isChecked()) && (questionFourCorrectCB2.isChecked())){
+        if ((questionFourCorrectCB1.isChecked()) && (questionFourCorrectCB2.isChecked())) {
             question4Score = 1;
         } else {
             question4Score = 0;
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton questionFiveCorrectRB = findViewById(R.id.questionFiveCorrect);
 
         // Check if correct radio button was clicked
-        if (questionFiveCorrectRB.isChecked()){
+        if (questionFiveCorrectRB.isChecked()) {
             question5Score = 1;
         } else {
             question5Score = 0;
@@ -120,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton questionSixCorrectRB = findViewById(R.id.questionSixCorrect);
 
         // Check if correct radio button was clicked
-        if (questionSixCorrectRB.isChecked()){
+        if (questionSixCorrectRB.isChecked()) {
             question6Score = 1;
         } else {
             question6Score = 0;
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox questionSevenCorrectCB3 = findViewById(R.id.question7Correct3);
 
         // Check if correct checkbox was clicked button was clicked
-        if ((questionSevenCorrectCB1.isChecked()) && (questionSevenCorrectCB2.isChecked()) && (questionSevenCorrectCB3.isChecked())){
+        if ((questionSevenCorrectCB1.isChecked()) && (questionSevenCorrectCB2.isChecked()) && (questionSevenCorrectCB3.isChecked())) {
             question7Score = 1;
         } else {
             question7Score = 0;
@@ -150,7 +150,7 @@ public class MainActivity extends AppCompatActivity {
         String question8AnswerString = questionEightCorrect.getText().toString();
 
         // Check if input is 30
-        if (question8AnswerString.equals("30")){
+        if (question8AnswerString.equals("30")) {
             question8Score = 1;
         } else {
             question8Score = 0;
@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
         RadioButton questionNineCorrectRB = findViewById(R.id.questionNineCorrect);
 
         // Check if correct radio button was clicked
-        if (questionNineCorrectRB.isChecked()){
+        if (questionNineCorrectRB.isChecked()) {
             question9Score = 1;
         } else {
             question9Score = 0;
@@ -178,31 +178,31 @@ public class MainActivity extends AppCompatActivity {
         RadioButton questionTenCorrectRB = findViewById(R.id.questionTenCorrect);
 
         // Check if correct radio button was clicked
-        if (questionTenCorrectRB.isChecked()){
+        if (questionTenCorrectRB.isChecked()) {
             question10Score = 1;
         } else {
             question10Score = 0;
         }
     }
 
-    public int calculateCorrectAnswers(){
+    public int calculateCorrectAnswers() {
         // calls the questionThreeEditTextView method to retrieve the score for question 3
         question3Score = question3EditTextView();
         question8Score = question8EditText();
 
         // Adds all of the correct answers
         correctAnswers = (question1Score + question2Score + question3Score + question4Score + question5Score + question6Score + question7Score +
-                            question8Score + question9Score + question10Score);
+                question8Score + question9Score + question10Score);
         return correctAnswers;
     }
 
     /**
      * Calculates the final percentage of correct answers
-     *
+     * <p>
      * The percentCorrect is converted to an integer to cut off any decimals
      *
      * @param answersCorrect passes in the answers correct and converts it to a double as there will be decimals in the final calculation
-     * @param questionTotal passes in the total questions and converts it to a double as there will be decimals in the final calculation
+     * @param questionTotal  passes in the total questions and converts it to a double as there will be decimals in the final calculation
      * @return returns the percentage of correct answers
      */
     public int calculateFinalScore(int answersCorrect, int questionTotal) {
