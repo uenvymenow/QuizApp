@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
     public void question4CheckBox(View view) {
         // Import correct checkboxes for question 4
         CheckBox questionFourCorrectCB1 = findViewById(R.id.questionFourCorrect1);
-        CheckBox questionFourCorrectCB2 = findViewById(R.id.questionFourCcorrect2);
+        CheckBox questionFourCorrectCB2 = findViewById(R.id.questionFourCorrect2);
 
         // Check if correct checkbox was clicked
         if ((questionFourCorrectCB1.isChecked()) && (questionFourCorrectCB2.isChecked())){
@@ -136,9 +136,9 @@ public class MainActivity extends AppCompatActivity {
 
         // Check if correct checkbox was clicked button was clicked
         if ((questionSevenCorrectCB1.isChecked()) && (questionSevenCorrectCB2.isChecked()) && (questionSevenCorrectCB3.isChecked())){
-            question6Score = 1;
+            question7Score = 1;
         } else {
-            question6Score = 0;
+            question7Score = 0;
         }
     }
 
@@ -163,19 +163,12 @@ public class MainActivity extends AppCompatActivity {
     public void question9RadioButton(View view) {
         // Import radio buttons for question 9
         RadioButton questionNineCorrectRB = findViewById(R.id.questionNineCorrect);
-        RadioButton questionNineIncorrectRB = findViewById(R.id.questionNineIncorrect);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionNineCorrect:
-                if (questionNineCorrectRB.isChecked())
-                    question9Score = 1;
-                break;
-            case R.id.questionNineIncorrect:
-                if (questionNineIncorrectRB.isChecked()) {
-                    question9Score = 0;
-                    break;
-                }
+        // Check if correct radio button was clicked
+        if (questionNineCorrectRB.isChecked()){
+            question9Score = 1;
+        } else {
+            question9Score = 0;
         }
     }
 
@@ -183,19 +176,12 @@ public class MainActivity extends AppCompatActivity {
     public void question10RadioButton(View view) {
         // Import radio buttons for question 10
         RadioButton questionTenCorrectRB = findViewById(R.id.questionTenCorrect);
-        RadioButton questionTenIncorrectRB = findViewById(R.id.questionTenIncorrect);
 
-        // Check which radio button was clicked
-        switch (view.getId()) {
-            case R.id.questionTenCorrect:
-                if (questionTenCorrectRB.isChecked())
-                    question10Score = 1;
-                break;
-            case R.id.questionTenIncorrect:
-                if (questionTenIncorrectRB.isChecked()) {
-                    question10Score = 0;
-                    break;
-                }
+        // Check if correct radio button was clicked
+        if (questionTenCorrectRB.isChecked()){
+            question10Score = 1;
+        } else {
+            question10Score = 0;
         }
     }
 
