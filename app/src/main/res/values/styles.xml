@@ -8,6 +8,39 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <!-- Topic header -->
     <string name="topic">Topic: Baseball History</string>
+
+    <!-- Question 1 -->
+    <string name="Question1">1) How many world series have the New York Yankees won?</string>
+    <string name="Question1Answer1">12</string>
+    <string name="Question1Answer2">27</string>
+    <string name="Question1Answer3">21</string>
+    <string name="Question1Answer4">18</string>
+
+    <!-- Question 2 -->
+    <string name="Question2">2) The Oldest baseball stadium still in use is?</string>
+    <string name="Question2Answer1">Fenway Park</string>
+    <string name="Question2Answer2">Yankee Stadium</string>
+    <string name="Question2Answer3">AT&amp;T Field</string>
+    <string name="Question2Answer4">Wrigley Field</string>
+
+    <!-- question 3 -->
+    <string name="Question3">3) What is the most frequently stolen base?</string>
+    <string name="Question3Hint">First Base, Second Base, Third Base, or Home</string>
+
+    <!-- Question 4 -->
+    <string name="Question4">4) Which of the aspects of scorekeeping are displayed on a standard scoreboard?</string>
+    <string name="Question4Answer1">Field Goals</string>
+    <string name="Question4Answer2">Goals</string>
+    <string name="Question4Answer3">Hits</string>
+    <string name="Question4Answer4">Runs</string>
+
+    <!-- Question 5 -->
+    <string name="Question5">5) How many innings are in a game?</string>
+    <string name="Question5Answer1">6</string>
+    <string name="Question5Answer2">9</string>
+    <string name="Question5Answer3">7</string>
+    <string name="Question5Answer4">8</string>
 
 </resources>
